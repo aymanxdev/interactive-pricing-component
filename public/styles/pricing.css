@@ -102,10 +102,6 @@ body:after {
   font-weight: 800;
 }
 
-.hide {
-  display: inline-block;
-}
-
 .sub-wrapper .discount {
   background-color: var(--light-grayish-red);
   color: var(--discount);
@@ -158,6 +154,9 @@ body:after {
   color: var(--grayish-blue);
 }
 .show {
+  display: none;
+}
+.hide {
   display: none;
 }
 .switch {
@@ -275,9 +274,10 @@ body:after {
   .container .slider {
     width: 100%;
   }
-  .discount .hide {
+  .discount .discount-hide {
     display: none;
   }
+
   .cta-wrapper {
     flex-direction: column;
   }
