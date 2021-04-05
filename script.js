@@ -65,5 +65,9 @@ slider.addEventListener("keydown", listener);
 slider.oninput = function () {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
-    "linear-gradient(to right, #eaeefb " + value + "%, #eaeefb 100%)";
+    "linear-gradient(to right, #10d5c2 0%, #10d5c2 " +
+    value +
+    "%, #eaeefb " +
+    value +
+    "%, #eaeefb 100%)";
 };
