@@ -15,6 +15,9 @@
   --grayish-blue: hsl(225, 20%, 60%);
   --dark-desaturated-blue: hsl(227, 35%, 25%);
 }
+html {
+  box-sizing: border-box;
+}
 *,
 *::after,
 *::before {
@@ -62,7 +65,6 @@ body:after {
 .title-wrapper p {
   font-size: 1.1em;
   color: var(--grayish-blue);
-  font-weight: 600;
   margin: 0;
 }
 
@@ -81,7 +83,7 @@ body:after {
   align-items: center;
   justify-content: space-between;
   color: var(--grayish-blue);
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1em;
 }
 
@@ -97,6 +99,7 @@ body:after {
   font-size: 2.6em;
   margin-right: 6px;
   color: var(--dark-desaturated-blue);
+  font-weight: 800;
 }
 
 .hide {
@@ -124,6 +127,28 @@ body:after {
   color: var(--grayish-blue);
   margin: 10px 0;
   list-style-image: url("../images/icon-check.svg");
+}
+
+.cta-wrapper span {
+  margin-left: 10px;
+}
+
+.cta-wrapper button {
+  padding: 0;
+  outline: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  background-color: var(--dark-desaturated-blue);
+  color: var(--light-grayish-blue);
+  padding: 15px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cta-wrapper button:hover {
+  color: var(--white);
 }
 
 .sub-wrapper {
@@ -233,13 +258,18 @@ body:after {
 }
 
 @media only screen and (max-width: 610px) {
-  .title {
+  .title-wrapper h1 {
     text-align: center;
+    font-size: 1.7em;
   }
-  .title .hide {
+  .title-wrapper p {
+    text-align: center;
+    font-size: 1.1em;
+  }
+  .title-wrapper .hide {
     display: block;
   }
-  .container .upper {
+  .container .pricing-wrapper {
     flex-direction: column;
   }
   .container .slider {
@@ -248,24 +278,24 @@ body:after {
   .discount .hide {
     display: none;
   }
-  .bottom {
+  .cta-wrapper {
     flex-direction: column;
   }
-  .bottom ul {
+  .cta-wrapper ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  .bottom button {
+  .cta-wrapper button {
     width: 200px;
   }
 }
 @media only screen and (max-width: 400px) {
-  .container .toggle-container {
+  .container .sub-wrapper {
     text-align: center;
   }
-  .container .toggle-container .show {
+  .container .sub-wrapper .show {
     display: block;
   }
 }
