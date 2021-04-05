@@ -21,7 +21,7 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 body {
   margin: 0;
@@ -103,10 +103,10 @@ body:after {
 }
 
 .hide {
-  display: none;
+  display: inline-block;
 }
 
-.discount {
+.sub-wrapper .discount {
   background-color: var(--light-grayish-red);
   color: var(--discount);
   font-size: 0.85em;
